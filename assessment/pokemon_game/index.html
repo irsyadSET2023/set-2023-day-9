@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Pokemon Game</title>
+  </head>
+  <body>
+    <h1>Pokemon Game</h1>
+    <form class="gameStarter">
+      <div>
+        <label for="player1">Player 1 Pokemon:</label>
+        <select name="player1" id="player1">
+          <option value="bulbasaur">Bulbasaur</option>
+          <option value="charmander">Charmander</option>
+          <option value="squirtle">Squirtle</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label for="player2">Player 2 Pokemon:</label>
+        <select name="player2" id="player2">
+          <option value="bulbasaur">Bulbasaur</option>
+          <option value="charmander">Charmander</option>
+          <option value="squirtle">Squirtle</option>
+        </select>
+      </div>
+      <br />
+    </form>
+    <input id="startButton" type="submit" value="Start" onclick="startGame()" />
+    <div class="container">
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+    </div>
+    <div class="battlefield">
+      <div class="battle-pokemon-1">
+        <div class="pokemon-status" id="player1PokemonBattle">
+          <div class="pokemonHP">
+            <label for="HP">HP:100</label>
+            <progress id="hpPlayer1" value="12" max="100"></progress>
+          </div>
+          <img src="" alt="Player1 Pokemon" srcset="" />
+        </div>
+        <div class="battle-box">
+          <div class="row">
+            <button
+              id="attackButton1"
+              onclick="attackPokemon('player1PokemonAttack')"
+            >
+              Attack
+            </button>
+          </div>
+          <div class="row">
+            <button
+              id="reviveButton1"
+              onclick="revivePokemon('player1PokemonRevive')"
+            >
+              Revive
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="battle-pokemon-2">
+        <div class="battle-box">
+          <div class="row">
+            <button
+              id="attackButton2"
+              onclick="attackPokemon('player2PokemonAttack')"
+            >
+              Attack
+            </button>
+          </div>
+          <div class="row">
+            <button
+              id="reviveButton2"
+              onclick="revivePokemon('player2PokemonRevive')"
+            >
+              Revive
+            </button>
+          </div>
+        </div>
+        <div class="pokemon-status" id="player2PokemonBattle">
+          <div class="pokemonHP">
+            <label for="HP">HP:100</label>
+            <progress id="hpPlayer2" value="12" max="100"></progress>
+          </div>
+          <img src="" alt="Player2 Pokemon" srcset="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
